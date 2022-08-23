@@ -1,4 +1,25 @@
 # Tagee
+Tagee的目标是利用web3数据外部性：开放性（公链数据）和产权确定性（用户控制的web3应用数据），打造一个数据金融经济体。
+
+在这个经济体内：
+* 用户可以如同存款一般存入自己的数据
+* 研发人员可以最低成本的开发出各式各样的数据产品
+* 投资人可以投资证券化后的任何一款数据产品。
+
+目的是给未来的数字世界用户，一个更加多元更加智能的产品市场，在这里可以挑选到给自己量身定做的各种智能产品。
+
+Tagee由以下部分组成：
+1. TageeDAO：负责Tagee经济体的治理，它是一个纯web3 DAO
+2. TageeCity：负责数据金融经济体的落地，它是一个纯Web3应用
+3. TageeFactory：负责提供SQL2Earn的工作场所，它是一个数据技术公司
+
+## web3世界的数据危机
+![image](https://user-images.githubusercontent.com/1047603/186057527-ae8c9aff-a21a-4f02-b5f6-01e2a394c1e8.png)
+
+## Tagee的方法论
+![image](https://user-images.githubusercontent.com/1047603/186057792-1a4b02df-0d70-4599-8828-92997b90eee2.png)
+
+
 ## TageeDAO
 TageeDAO是一个数据工作者的DAO，目的是建立一个去中心化的开源web3数据仓库。解决数据及计算任务的复用问题，和数据工作者的协作与社交需求。
 
@@ -31,3 +52,9 @@ TageeCity收取：
 1. 数据任务缴纳的数据治理费用
 2. NFT交易的按比例抽成
 3. 每个用户，入城护照NFT的mint费用
+
+## TageeFactory
+TageeFactory会利用web2世界的大数据资源与能力，结合TageeCity来创造价值基础
+
+# Tagee的代币模型
+TageeDAO发行治理币，代表了在DAO里面的投票权和分红权。通过发行治理币，TageeDAO把部分资金转换为稳定币，作为TageeCity的储备信用货币。
