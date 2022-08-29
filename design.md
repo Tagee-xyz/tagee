@@ -314,7 +314,7 @@ auditOrganization | String | 审计组织
 序号 | 模块 | 字段 | 类型 | 描述 |  
 -- | -- | -- | -- | -- | --
 1 | 基础属性 | hash | String | 交易hash | 主键
-2 | time | DATETIME | 交易时间 |  
+2 |  | time | DATETIME | 交易时间 |  
 3 |  | lockTime | BIGINT | 交易锁定时间 |  
 4 |  | confirmations | INT | 确认次数 |  
 5 |  | index | Long | 交易索引 |  
