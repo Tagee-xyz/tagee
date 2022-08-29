@@ -142,13 +142,13 @@ auditOrganization | String | 审计组织
 16 |  | transactions | Array | 数组。交易对象。或者是32字节的交易哈希。
 17 |  | uncles | Array | 数组。叔哈希的数组。
 18 | 父区块信息 | parentHash | String | 字符串，32字节的父区块的哈希值。
-19 |  | parentNumber | int | 区块号。当这个区块处于pending将会返回null。
+19 |  | parentNumber | int | 父区块号。当这个区块处于pending将会返回null。
 20 |  | parentNonce | String | 字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。
 21 |  | parentMiner | String | 字符串，20字节。这个区块获得奖励的矿工。
-22 |  | parentDifficulty | bigint | BigNumber类型。当前块的难度，整数。
+22 |  | parentDifficulty | bigint | BigNumber类型。父区块的难度，整数。
 23 |  | parentTotalDifficulty | bigint | BigNumber类型。区块链到当前块的总难度，整数。
-24 |  | parentSize | int | Number。当前这个块的字节大小。
-25 |  | parentTimestamp | bigint | Number。区块打包时的unix时间戳。
+24 |  | parentSize | int | Number。父区块块的字节大小。
+25 |  | parentTimestamp | bigint | Number。父区块打包时的unix时间戳。
 
 #### 二.交易数据transactions DWD
 
