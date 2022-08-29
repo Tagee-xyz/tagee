@@ -1,5 +1,5 @@
 # Tagee以太坊数据仓库设计
- 
+`声明：tagee致力于全网公链数仓的设计开发，诚邀广大web3公民一起共建。欢迎大家加入`
 ***
 
 ## 设计目的
@@ -9,6 +9,14 @@
 <img width="412" alt="image" src="https://user-images.githubusercontent.com/111756902/187111591-195e06e3-3b65-4c9b-a9e8-21fa0181e4a5.png">
 
 架构采取极简的数据层级，提升数据复用性，让公共的指标沉淀起来，开放到web3公民。
+### 架构说明
+#### 层级说明
+ODS: Operational Data Store，操作型数据，属于源数据层，指结构与源系统基本保持一致的增量或者全量数据。   
+DWD:Data Warehouse Detail，数据仓库明细层数据。  
+DWS:Data Warehouse Summary，数据仓库汇总层数据。  
+DIM:Dimension，维度层数据。  
+DM:Data Mart，数据集市层数据。  
+
 
 ***
 ## 以太坊数据仓库
