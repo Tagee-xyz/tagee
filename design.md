@@ -125,102 +125,102 @@ auditOrganization | String | 审计组织
 序号 | 模块 | 字段 | 类型 | 描述
 -- | -- | -- | -- | --
 1 | 基础属性 | number | int | 区块号。当这个区块处于pending将会返回null。
-2 | hash | String | 区块的哈希串。当这个区块处于pending将会返回null。
-3 | nonce | String | 字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。
-4 | sha3Uncles | String | 字符串，32字节。叔区块的哈希值。
-5 | logsBloom | String | 字符串，区块日志的布隆过滤器9。当这个区块处于pending将会返回null。
-6 | transactionsRoot | String | 字符串，32字节，区块的交易前缀树的根。
-7 | stateRoot | String | 字符串，32字节。区块的最终状态前缀树的根。
-8 | miner | String | 字符串，20字节。这个区块获得奖励的矿工。
-9 | difficulty | bigint | BigNumber类型。当前块的难度，整数。
-10 | totalDifficulty | bigint | BigNumber类型。区块链到当前块的总难度，整数。
-11 | extraData | String | 字符串。当前块的extra data字段。
-12 | size | int | Number。当前这个块的字节大小。
-13 | gasLimit | int | Number，当前区块允许使用的最大gas。
-14 | gasUsed | bigint | 当前区块累计使用的总的gas。
-15 | timestamp | bigint | Number。区块打包时的unix时间戳。
-16 | transactions | Array | 数组。交易对象。或者是32字节的交易哈希。
-17 | uncles | Array | 数组。叔哈希的数组。
+2 |  | hash | String | 区块的哈希串。当这个区块处于pending将会返回null。
+3 |  | nonce | String | 字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。
+4 |  | sha3Uncles | String | 字符串，32字节。叔区块的哈希值。
+5 |  | logsBloom | String | 字符串，区块日志的布隆过滤器9。当这个区块处于pending将会返回null。
+6 |  | transactionsRoot | String | 字符串，32字节，区块的交易前缀树的根。
+7 |  | stateRoot | String | 字符串，32字节。区块的最终状态前缀树的根。
+8 |  | miner | String | 字符串，20字节。这个区块获得奖励的矿工。
+9 |  | difficulty | bigint | BigNumber类型。当前块的难度，整数。
+10 |  | totalDifficulty | bigint | BigNumber类型。区块链到当前块的总难度，整数。
+11 |  | extraData | String | 字符串。当前块的extra data字段。
+12 |  | size | int | Number。当前这个块的字节大小。
+13 |  | gasLimit | int | Number，当前区块允许使用的最大gas。
+14 |  | gasUsed | bigint | 当前区块累计使用的总的gas。
+15 |  | timestamp | bigint | Number。区块打包时的unix时间戳。
+16 |  | transactions | Array | 数组。交易对象。或者是32字节的交易哈希。
+17 |  | uncles | Array | 数组。叔哈希的数组。
 18 | 父区块信息 | parentHash | String | 字符串，32字节的父区块的哈希值。
-19 | parentNumber | int | 区块号。当这个区块处于pending将会返回null。
-20 | parentNonce | String | 字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。
-21 | parentMiner | String | 字符串，20字节。这个区块获得奖励的矿工。
-22 | parentDifficulty | bigint | BigNumber类型。当前块的难度，整数。
-23 | parentTotalDifficulty | bigint | BigNumber类型。区块链到当前块的总难度，整数。
-24 | parentSize | int | Number。当前这个块的字节大小。
-25 | parentTimestamp | bigint | Number。区块打包时的unix时间戳。
+19 |  | parentNumber | int | 区块号。当这个区块处于pending将会返回null。
+20 |  | parentNonce | String | 字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。
+21 |  | parentMiner | String | 字符串，20字节。这个区块获得奖励的矿工。
+22 |  | parentDifficulty | bigint | BigNumber类型。当前块的难度，整数。
+23 |  | parentTotalDifficulty | bigint | BigNumber类型。区块链到当前块的总难度，整数。
+24 |  | parentSize | int | Number。当前这个块的字节大小。
+25 |  | parentTimestamp | bigint | Number。区块打包时的unix时间戳。
 
 #### 二.交易数据transactions DWD
 
 序号 | 模块 | 字段 | 类型 | 描述
 -- | -- | -- | -- | --
 1 | 基础属性 | hash | String | 交易hash
-2 | time | DATETIME | 交易时间
-3 | lockTime | BIGINT | 交易锁定时间
-4 | confirmations | INT | 确认次数
-5 | index | Long | 交易索引
-6 | coinbase | Boolean | 是否为coinbase交易
-7 | size | Integer | 交易大小
-8 | version | Long | 版本
-9 | doubleSpend | Boolean | 是否双花
-10 | to | String | 交易接收者地址
-11 | value | Double | 交易附带的货币量
-12 | transactionFee | Long | 费用, 单位 satoshi
-13 | gasPrice | Double | 交易发起者配置的gas价格，单位是wei。
-14 | gas | Double | 交易发起者提供的gas。.
-15 | input | String | 交易附带的数据
-16 | 块信息 | blockHash | String | 交易所在区块hash
-17 | blocknumber | int | 区块号。当这个区块处于pending将会返回null。
-18 | blockminer | String | 字符串，20字节。这个区块获得奖励的矿工。
-19 | blockdifficulty | bigint | BigNumber类型。当前块的难度，整数。
-20 | blocktotalDifficulty | bigint | BigNumber类型。区块链到当前块的总难度，整数。
-21 | size | int | Number。当前这个块的字节大小。
-22 | gasLimit | int | Number，当前区块允许使用的最大gas。
-23 | gasUsed | bigint | 当前区块累计使用的总的gas。
-24 | timestamp | bigint | Number。区块打包时的unix时间戳。
+2 |  | time | DATETIME | 交易时间
+3 |  | lockTime | BIGINT | 交易锁定时间
+4 |  | confirmations | INT | 确认次数
+5 |  | index | Long | 交易索引
+6 |  | coinbase | Boolean | 是否为coinbase交易
+7 |  | size | Integer | 交易大小
+8 |  | version | Long | 版本
+9 |  | doubleSpend | Boolean | 是否双花
+10 |  | to | String | 交易接收者地址
+11 |  | value | Double | 交易附带的货币量
+12 |  | transactionFee | Long | 费用, 单位 satoshi
+13 |  | gasPrice | Double | 交易发起者配置的gas价格，单位是wei。
+14 |  | gas | Double | 交易发起者提供的gas。.
+15 |  | input | String | 交易附带的数据
+16 |  | 块信息 | blockHash | String | 交易所在区块hash
+17 |  | blocknumber | int | 区块号。当这个区块处于pending将会返回null。
+18 |  | blockminer | String | 字符串，20字节。这个区块获得奖励的矿工。
+19 |  | blockdifficulty | bigint | BigNumber类型。当前块的难度，整数。
+20 |  | blocktotalDifficulty | bigint | BigNumber类型。区块链到当前块的总难度，整数。
+21 |  | size | int | Number。当前这个块的字节大小。
+22 |  | gasLimit | int | Number，当前区块允许使用的最大gas。
+23 |  | gasUsed | bigint | 当前区块累计使用的总的gas。
+24 |  | timestamp | bigint | Number。区块打包时的unix时间戳。
 25 | 交易发起者账号信息 | from | String | 交易发起者地址
-26 | frombalance | Double | 余额
+26 |  | frombalance | Double | 余额
 27 | 交易接收者账户信息 | to | String | 交易接收者地址
-28 | tobalance | Double | 余额
+28 |  | tobalance | Double | 余额
 
 #### 三.账户信息DWD
 
 序号 | 模块 | 字段 | 类型 | 描述
 -- | -- | -- | -- | --
 1 | 基础属性 | address | String | 地址哈希
-2 | balance | Double | 余额
-3 | totalSentSat | Boolean | 是否为coinbase交易
-4 | storageRoot | String | 账户数据，默认为空
-5 | codeHash | String | 合约代码哈希
-6 | nonce | String | 账户交易数量或者创建合约序号
+2 |  | balance | Double | 余额
+3 |  | totalSentSat | Boolean | 是否为coinbase交易
+4 |  | storageRoot | String | 账户数据，默认为空
+5 |  | codeHash | String | 合约代码哈希
+6 |  | nonce | String | 账户交易数量或者创建合约序号
 
 #### 三.DeFi项目信息DWD
 
 序号 | 模块 | 字段 | 类型 | 描述
 -- | -- | -- | -- | --
 1 | 基础属性 | id | String | 项目id
-2 | name | String | 项目名称
-3 | category | String | 项目类别
-4 | secondCategory | String | 二级分类（主要是DEX类项目）
-5 | underlyingAsset | String | 原生资产（主要是锚定资产）
-6 | locked | Long | 锁仓量，单位美元
-7 | lockedRate | Double | 锁仓占比
-8 | logoUrl | String | 图片url
-9 | website | String | 官网链接
-10 | tokenSymbol | String | 平台币symbol
-11 | tokenAddress | String | 平台币合约地址
-12 | tokenPrice | Double | 平台币价格
-13 | releaseTime | Long | 发布时间
-14 | logoUrl | String | 图片url
-15 | location | String | 所在地
-16 | description | String | 项目描述
-17 | poster | String | 海报
-18 | movie | String | 视频链接
-19 | twitter | String | twitter群
-20 | discard | String | discard群
-21 | telegram | String | telegram群
-22 | github | String | github链接
-23 | auditOrganization | String | 审计组织
+2 |  | name | String | 项目名称
+3 |  | category | String | 项目类别
+4 |  | secondCategory | String | 二级分类（主要是DEX类项目）
+5 |  | underlyingAsset | String | 原生资产（主要是锚定资产）
+6 |  | locked | Long | 锁仓量，单位美元
+7 |  | lockedRate | Double | 锁仓占比
+8 |  | logoUrl | String | 图片url
+9 |  | website | String | 官网链接
+10 |  | tokenSymbol | String | 平台币symbol
+11 |  | tokenAddress | String | 平台币合约地址
+12 |  | tokenPrice | Double | 平台币价格
+13 |  | releaseTime | Long | 发布时间
+14 |  | logoUrl | String | 图片url
+15 |  | location | String | 所在地
+16 |  | description | String | 项目描述
+17 |  | poster | String | 海报
+18 |  | movie | String | 视频链接
+19 |  | twitter | String | twitter群
+20 |  | discard | String | discard群
+21 |  | telegram | String | telegram群
+22 |  | github | String | github链接
+23 |  | auditOrganization | String | 审计组织
 
 #### 四.DeFi项目信息DWD
 
