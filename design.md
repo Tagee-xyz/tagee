@@ -374,3 +374,8 @@ auditOrganization | String | 审计组织
 16 | firstTransactionTime | Long | 第一次交易时间 |  
 17 | lastTransactionTime | Long | 最后一次交易时间 |  
 18 | 标签 | isActice | Boolean | 是否活跃 |  
+
+## 设计原则
+
+## 数仓规范
+
