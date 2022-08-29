@@ -91,7 +91,7 @@ TageeCity收取：
 DataFactory会利用web2世界的大数据资源与能力，结合TageeCity来创造价值基础
 
 ### DataMkt
-用户订阅数据产品，数据开发者发布数据产品的地方，类似AppStore
+用户订阅数据产品，数据开发者发布数据产品的地方，类似AppStore，未来这里面将是大家智能应用的入口（每个数据产品，其实就是某个领域的智能机器人）
 
 # Tagee的代币模型
 TageeDAO发行治理币，代表了在DAO里面的投票权和分红权。通过发行治理币，TageeDAO把部分资金转换为稳定币，作为TageeCity的储备信用货币。
