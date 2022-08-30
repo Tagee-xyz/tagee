@@ -380,7 +380,7 @@ auditOrganization | String | 审计组织
 ## 数仓规范
 
 ## 建表语句
-``` 
+```sql
    Create table  ods_ethereum_bolck_info_da(
     number  int COMMENT '区块号。当这个区块处于pending将会返回null。',
     hash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
