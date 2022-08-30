@@ -379,3 +379,5 @@ auditOrganization | String | 审计组织
 
 ## 数仓规范
 
+## 建表语句
+https://github.com/Tagee-xyz/tagee/blob/main/dw-sql-script.sql
