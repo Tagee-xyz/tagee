@@ -39,7 +39,7 @@
     gasPrice    Double  COMMENT '交易发起者配置的gas价格，单位是wei。',
     gas Double  COMMENT '交易发起者提供的gas。.',
     input   String  COMMENT '交易附带的数据'
-    )
+    );
 
 
    Create table  ods_ethereum_trans_input_info_di(
@@ -49,14 +49,14 @@
     if_coinbase Boolean COMMENT '是否为coinbase交易',
     out_order_num   int COMMENT '输出的次序',
     pre_out_txid    String  COMMENT '输出的次序'
-    )
+    );
 
    Create table  ods_ethereum_trans_output_info_di(
     hash    String  COMMENT '交易hash',
     address String  COMMENT '账户地址',
     amount  double  COMMENT '交易金额 ,会到小数后18位',
     order_num   int COMMENT '输出的次序'
-    )
+    );
 
 
 
@@ -67,7 +67,7 @@
     storageRoot String   COMMENT '账户数据，默认为空',
     codeHash    String   COMMENT '合约代码哈希',
     nonce   String  COMMENT '账户交易数量或者创建合约序号'
-    )
+    );
 
    Create table  ods_ethereum_defi_project_info_da(
     id  String  COMMENT '项目id',
@@ -92,7 +92,7 @@
     telegram    String  COMMENT 'telegram群',
     github  String  COMMENT 'github链接',
     auditOrganization   String  COMMENT '审计组织'
-    )
+    );
 
 
    Create table  dwd_ethereum_bolck_info_da(
@@ -121,7 +121,7 @@
     parentTotalDifficulty   bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
     parentSize  int COMMENT 'Number。当前这个块的字节大小。',
     parentTimestamp bigint  COMMENT 'Number。区块打包时的unix时间戳。'
-    )
+    );
 
    
    Create table  dwd_ethereum_trans_info_di(
@@ -152,7 +152,7 @@
     fromBalance Double  COMMENT '余额',
     toAdress  String  COMMENT '交易接收者地址',
     toBalance   Double  COMMENT '余额'
-    )
+    );
 
    Create table  dwd_ethereum_account_info_da(
     address String  COMMENT '地址哈希',
@@ -161,7 +161,7 @@
     storageRoot String   COMMENT '账户数据，默认为空',
     codeHash    String   COMMENT '合约代码哈希',
     nonce   String  COMMENT '账户交易数量或者创建合约序号'
-    )
+    );
 
    Create table  dwd_ethereum_defi_project_info_da(
     id  String  COMMENT '项目id',
@@ -186,7 +186,7 @@
     telegram    String  COMMENT 'telegram群',
     github  String  COMMENT 'github链接',
     auditOrganization   String  COMMENT '审计组织'
-    )
+    );
 
 
 
@@ -233,7 +233,7 @@
     lastTranTime    String  COMMENT '区块最后一次交易时间',
     tranAdressCount Integer COMMENT '交易地址数',
     activeAdressCount   Integer COMMENT '活跃地址数'
-    )
+    );
 
 
    Create table  dws_ethereum_trans_info_di(
@@ -273,7 +273,7 @@
     outputsValue    Double  COMMENT '输出总量',
     outputsValueSat bigint   COMMENT ' 输出总量，单位 satoshi',
     isBigAmount Boolean COMMENT '是否大额交易'
-    )
+    );
 
 
    Create table  dws_ethereum_account_info_da(
@@ -295,7 +295,7 @@
     firstTransactionTime    bigint   COMMENT ' 第一次交易时间',
     lastTransactionTime bigint    COMMENT '最后一次交易时间',
     isActice    Boolean COMMENT '是否活跃'
-    )
+    );
 
    Create table  dws_ethereum_defi_project_info_da(
     id  String  COMMENT '项目id',
@@ -320,4 +320,4 @@
     telegram    String  COMMENT 'telegram群',
     github  String  COMMENT 'github链接',
     auditOrganization   String  COMMENT '审计组织'
-    )
+    );
