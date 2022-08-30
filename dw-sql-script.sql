@@ -18,7 +18,7 @@
     timestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
     transactions    array  COMMENT ' 数组。交易对象。或者是32字节的交易哈希。',
     uncles  array  COMMENT ' 数组。叔哈希的数组。'
-    )
+    );
    
    Create table  ods_ethereum_trans_info_di(
 
