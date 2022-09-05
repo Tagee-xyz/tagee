@@ -21,25 +21,22 @@ Create table  ods_ethereum_bolck_info_da(
     baseFeePerGas  bigint  COMMENT '交易费用'
     );
    
-   Create table  ods_ethereum_trans_info_di(
-
-    hash    String  COMMENT '交易hash',
-    time    DATETIME    COMMENT '交易时间',
-    lockTime    BIGINT  COMMENT '交易锁定时间',
-    confirmations   INT COMMENT '确认次数',
-    blockHash   String  COMMENT '交易所在区块hash',
-    index   INT    COMMENT '交易索引',
-    coinbase    Boolean COMMENT '是否为coinbase交易',
-    size    Integer COMMENT '交易大小',
-    version INT    COMMENT '版本',
-    doubleSpend Boolean COMMENT '是否双花',
-    fromAdress    String  COMMENT '交易发起者地址',
-    toAdress  String  COMMENT '交易接收者地址',
-    value   Double  COMMENT '交易附带的货币量',
-    transactionFee  Double    COMMENT '费用, 单位 satoshi',
-    gasPrice    Double  COMMENT '交易发起者配置的gas价格，单位是wei。',
-    gas Double  COMMENT '交易发起者提供的gas。.',
-    input   String  COMMENT '交易附带的数据'
+ Create table  ods_ethereum_trans_info_di(
+    hash  string COMMENT '交易hash',
+    nonce bigint COMMENT 'POW生成的哈希。当这个区块处于pending将会返回null。',
+    blockHash  String  COMMENT '交易所在区块hash',
+    block_number  bigint COMMENT '交易所在区块hash',
+    transaction_index bigint COMMENT '区块号。当这个区块处于pending将会返回null。',
+    fromAddress  String  COMMENT '交易发起者地址',
+    to_address  String  COMMENT '交易接收者地址',
+    value double COMMENT '交易附带的货币量',
+    gas bigint  COMMENT '交易发起者提供的gas。.',
+    gasPrice bigint    COMMENT '交易发起者配置的gas价格，单位是wei。',
+    input  String  COMMENT '交易附带的数据',
+    blockTimestamp bigint COMMENT '区块时间戳',
+    maxfeePerGas bigint  COMMENT '最大交易费用',
+    maxpriorityfeePerGas  bigint  COMMENT '最大交易费用',
+    transaction_type  bigint  COMMENT '交易类型'
     );
 
 
