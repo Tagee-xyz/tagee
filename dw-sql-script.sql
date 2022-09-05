@@ -1,5 +1,5 @@
 
-   Create table  ods_ethereum_bolck_info_da(
+Create table  ods_ethereum_bolck_info_da(
     number  int COMMENT '区块号。当这个区块处于pending将会返回null。',
     hash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
     parentHash  string  COMMENT '字符串，32字节的父区块的哈希值。',
@@ -8,16 +8,17 @@
     logsBloom   string  COMMENT '字符串，区块日志的布隆过滤器9。当这个区块处于pending将会返回null。',
     transactionsRoot string   COMMENT 'String  字符串，32字节，区块的交易前缀树的根。',
     stateRoot   string  COMMENT '字符串，32字节。区块的最终状态前缀树的根。',
+    receiptsRoot string COMMENT '字符串，32字节。区块的最终状态前缀树的根。',
     miner   string  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
-    difficulty  bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
-    totalDifficulty bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
-    extraData   string  COMMENT '字符串。当前块的extra data字段。',
+    difficulty  double  COMMENT 'BigNumber类型。当前块的难度，整数。',
+    totalDifficulty double  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
     size    int COMMENT 'Number。当前这个块的字节大小。',
+    extraData   string  COMMENT '字符串。当前块的extra data字段。',
     gasLimit    int COMMENT 'Number，当前区块允许使用的最大gas。',
     gasUsed bigint  COMMENT '当前区块累计使用的总的gas。',
     timestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
-    transactions    array  COMMENT ' 数组。交易对象。或者是32字节的交易哈希。',
-    uncles  array  COMMENT ' 数组。叔哈希的数组。'
+    transactionCount   bigint  COMMENT '交易数量',
+    baseFeePerGas  bigint  COMMENT '交易费用'
     );
    
    Create table  ods_ethereum_trans_info_di(
