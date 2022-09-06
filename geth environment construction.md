@@ -3,30 +3,34 @@
     go语言环境、Git环境、geth环境。今天主要是geth安装
 ### geth环境搭建(http下载包安装方式)：
 #### 下载geth
-      下载链接：https://geth.ethereum.org/downloads/
-      也可以用命名下载： wget https://gethstore.blob.core.windows.net/builds/geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz
+      下载链接：``` https://geth.ethereum.org/downloads/ ```
+      也可以用命名下载：```  wget https://gethstore.blob.core.windows.net/builds/geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz ```
       注意：科学上网
 <img width="1152" alt="image" src="https://user-images.githubusercontent.com/111756902/188559388-3579a4cc-df9b-41a2-bb8f-dcbcd937c73e.png">
 
 #### 解压安装包
-```Java
+```
 tar -zxvf geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz
 ```
 #### 重命名目录名称
 
-```shell
+```
 mv geth-alltools-darwin-amd64-1.10.21-67109427 geth-1.10.21
 ```
-移动目录：mv geth-1.10.21 /usr/local/
+移动目录：``` mv geth-1.10.21 /usr/local/ ```
 #### 配置Geth环境变量
 
 vi /etc/profile
 在/etc/profile 中添加
+```
 export GETH_HOME&#61;/usr/local/geth-alltools-1.10.16
 export PATH&#61;$PATH:$GETH_HOME
+```
 添加完成按Esc，输入:wq保存退出
 配置生效
+```
 source /etc/profile
+```
 #### 验证Geth安装是否成功
 geth version或者 geth -h
 
@@ -34,12 +38,16 @@ geth version或者 geth -h
 #### 需要环境
 go语言开发环境、brew
 #### 命令执行
+```
 brew tap ethereum/ethereum
 brew install ethereum
+```
 #### 验证安装是否成功
 geth -h
 #### 启动同步
+```
 geth --datadir "%cd%\chain" --rpc --rpcport 8545 --rpcaddr "0.0.0.0" --rpcapi "eth,net,web3,personal,admin" --rpccorsdomain "*" --port 30303 --syncmode "fast" --cache  4096  --maxpeers 100
+```
 
 ### 同步以太坊数据的坑
 #### 一 想要快速同步数据的解决办法：
