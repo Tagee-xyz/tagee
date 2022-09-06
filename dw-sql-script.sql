@@ -1,7 +1,7 @@
 
-Create table  ods_ethereum_bolck_info_da(
-    number  int COMMENT '区块号。当这个区块处于pending将会返回null。',
-    hash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
+Create table  ods_ethereum_block_info_da(
+    blockNumber  int COMMENT '区块号。当这个区块处于pending将会返回null。',
+    blockHash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
     parentHash  string  COMMENT '字符串，32字节的父区块的哈希值。',
     nonce   string  COMMENT '字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。',
     sha3Uncles  string  COMMENT '字符串，32字节。叔区块的哈希值。',
@@ -12,24 +12,24 @@ Create table  ods_ethereum_bolck_info_da(
     miner   string  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
     difficulty  bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
     totalDifficulty bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
-    size    int COMMENT 'Number。当前这个块的字节大小。',
+    blockSize    int COMMENT 'Number。当前这个块的字节大小。',
     extraData   string  COMMENT '字符串。当前块的extra data字段。',
     gasLimit    int COMMENT 'Number，当前区块允许使用的最大gas。',
     gasUsed bigint  COMMENT '当前区块累计使用的总的gas。',
-    timestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
+    blocktimestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
     transactionCount   bigint  COMMENT '交易数量',
     baseFeePerGas  bigint  COMMENT '交易费用'
     );
    
  Create table  ods_ethereum_trans_info_di(
-    hash  string COMMENT '交易hash',
+    transHash  string COMMENT '交易hash',
     nonce bigint COMMENT 'POW生成的哈希。当这个区块处于pending将会返回null。',
     blockHash  String  COMMENT '交易所在区块hash',
     blockNumber  bigint COMMENT '交易所在区块hash',
     transactionIndex bigint COMMENT '区块号。当这个区块处于pending将会返回null。',
     fromAddress  String  COMMENT '交易发起者地址',
     toAddress  String  COMMENT '交易接收者地址',
-    value double COMMENT '交易附带的货币量',
+    transValue double COMMENT '交易附带的货币量',
     gas bigint  COMMENT '交易发起者提供的gas。.',
     gasPrice bigint    COMMENT '交易发起者配置的gas价格，单位是wei。',
     input  String  COMMENT '交易附带的数据',
