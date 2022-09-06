@@ -9,8 +9,9 @@
 <img width="1152" alt="image" src="https://user-images.githubusercontent.com/111756902/188559388-3579a4cc-df9b-41a2-bb8f-dcbcd937c73e.png">
 
 #### 解压安装包
-
+```Java
 tar -zxvf geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz
+```
 #### 重命名目录名称
 
 ```shell
