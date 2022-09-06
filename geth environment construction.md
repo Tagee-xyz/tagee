@@ -25,8 +25,8 @@ mv geth-alltools-darwin-amd64-1.10.21-67109427 geth-1.10.21
 vi /etc/profile
 在/etc/profile 中添加
 ```
-export GETH_HOME&#61;/usr/local/geth-alltools-1.10.16
-export PATH&#61;$PATH:$GETH_HOME
+export GETH_HOME=/usr/local/geth-alltools-1.10.16
+export PATH=$PATH:$GETH_HOME
 ```
 添加完成按Esc，输入:wq保存退出
 配置生效
