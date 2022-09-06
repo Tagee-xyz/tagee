@@ -25,10 +25,10 @@ Create table  ods_ethereum_bolck_info_da(
     hash  string COMMENT '交易hash',
     nonce bigint COMMENT 'POW生成的哈希。当这个区块处于pending将会返回null。',
     blockHash  String  COMMENT '交易所在区块hash',
-    block_number  bigint COMMENT '交易所在区块hash',
-    transaction_index bigint COMMENT '区块号。当这个区块处于pending将会返回null。',
+    blockNumber  bigint COMMENT '交易所在区块hash',
+    transactionIndex bigint COMMENT '区块号。当这个区块处于pending将会返回null。',
     fromAddress  String  COMMENT '交易发起者地址',
-    to_address  String  COMMENT '交易接收者地址',
+    toAddress  String  COMMENT '交易接收者地址',
     value double COMMENT '交易附带的货币量',
     gas bigint  COMMENT '交易发起者提供的gas。.',
     gasPrice bigint    COMMENT '交易发起者配置的gas价格，单位是wei。',
@@ -36,7 +36,7 @@ Create table  ods_ethereum_bolck_info_da(
     blockTimestamp bigint COMMENT '区块时间戳',
     maxfeePerGas bigint  COMMENT '最大交易费用',
     maxpriorityfeePerGas  bigint  COMMENT '最大交易费用',
-    transaction_type  bigint  COMMENT '交易类型'
+    transactionType  bigint  COMMENT '交易类型'
     );
 
 
