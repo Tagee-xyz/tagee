@@ -59,7 +59,7 @@ geth --datadir "%cd%\chain" --rpc --rpcport 8545 --rpcaddr "0.0.0.0" --rpcapi "e
 
 3.为了加快同步速度，手动添加节点。在控制台可以通过``net.peerCount`查看当前节点连接的外部节点数量，如果已知有外部稳定的节点，可以执行以下命令添加：
 ```
-admin.addPeer("enode://0d1b9eed7afe2d5878d5d8a4c2066b600a3bcac2e5730586421af224e93a58cd03cac75bf0b2a62fd8049cd3692a085758cc1e407c8b2c94bb069814a5e8d0f0@209.9.106.245:30303")
+admin.addPeer("enode://0d1b9eed7afe2d5878d5d8a4c2066b600a3bcac2e5730586421af224e93a58cd03cac75bf0b2a62fd8049cd3692a085758cc1e407c8b2c94bb069814a5e8d0f0@IP:port")
 ```
 
 4.在启动节点时设置缓存大小，有一定效果
