@@ -7,12 +7,16 @@
       也可以用命名下载： wget https://gethstore.blob.core.windows.net/builds/geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz
       注意：科学上网
 <img width="1152" alt="image" src="https://user-images.githubusercontent.com/111756902/188559388-3579a4cc-df9b-41a2-bb8f-dcbcd937c73e.png">
+
 #### 解压安装包
+
 tar -zxvf geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz
 #### 重命名目录名称
+
 mv geth-alltools-darwin-amd64-1.10.21-67109427 geth-1.10.21
 移动目录：mv geth-1.10.21 /usr/local/
 #### 配置Geth环境变量
+
 vi /etc/profile
 在/etc/profile 中添加
 export GETH_HOME&#61;/usr/local/geth-alltools-1.10.16
