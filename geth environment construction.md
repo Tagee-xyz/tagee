@@ -4,13 +4,9 @@
 ### geth环境搭建(http下载包安装方式)：
 #### 下载geth
       下载链接：
-      ``` 
       https://geth.ethereum.org/downloads/ 
-      ```
-      也可以用命名下载：
-      ```  
+      也可以用命令下载：
       wget https://gethstore.blob.core.windows.net/builds/geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz 
-      ```
       注意：科学上网
 <img width="1152" alt="image" src="https://user-images.githubusercontent.com/111756902/188559388-3579a4cc-df9b-41a2-bb8f-dcbcd937c73e.png">
 
