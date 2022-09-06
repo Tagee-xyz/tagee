@@ -1,7 +1,7 @@
 ## 以太坊 环境搭建
 ### 以太坊环境前提条件
     go语言环境、Git环境、geth环境。今天主要是geth安装
-### geth环境搭建：
+### geth环境搭建(http下载包安装方式)：
 #### 下载geth
       下载链接：https://geth.ethereum.org/downloads/
       也可以用命名下载： wget https://gethstore.blob.core.windows.net/builds/geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz
