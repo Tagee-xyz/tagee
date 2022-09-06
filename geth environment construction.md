@@ -13,7 +13,9 @@
 tar -zxvf geth-alltools-darwin-amd64-1.10.21-67109427.tar.gz
 #### 重命名目录名称
 
+```shell
 mv geth-alltools-darwin-amd64-1.10.21-67109427 geth-1.10.21
+```
 移动目录：mv geth-1.10.21 /usr/local/
 #### 配置Geth环境变量
 
