@@ -92,6 +92,49 @@ Create table  ods_ethereum_block_info_da(
     auditOrganization   String  COMMENT '审计组织'
     );
 
+   Create table  ods_ethereum_token_transfers_di(
+    tokenAddress   string COMMENT 'token地址',
+    fromAddress    string COMMENT '交易发起者地址',
+    toAddress  string  COMMENT '交易接收者地址',
+    value   numeric COMMENT '交易附带的货币量',
+    transHash    string COMMENT '交易hash',
+    logIndex   bigint COMMENT 'log index ',
+    blockNumber    bigint COMMENT '区块号'
+    )
+
+
+Create table  ods_ethereum_log_di(
+    logIndex   bigint  COMMENT 'log index ',
+    transHash    string COMMENT '交易hash',
+    transIndex   bigint COMMENT '交易index',
+    blockHash  string COMMENT '区块hash',
+    blockNumber    bigint COMMENT '区块号。',
+    address string COMMENT '交易地址',
+    data    string COMMENT 'data',
+    topics  string COMMENT 'topics'
+    )
+
+Create table  ods_ethereum_contract_da(
+    address string  COMMENT 'contract 地址',
+    bytecode    string  COMMENT 'bytecode',
+    functionSighashes  string  COMMENT 'functionSighashes',
+    isErc20    boolean  COMMENT '是否是Erc20：True/FALSE',
+    isErc721   boolean  COMMENT '是否是NFT：True/FALSE',
+    blockNumber    bigint  COMMENT '区块号'
+    )
+
+Create table  ods_ethereum_receipt_da(
+    transHash    string   COMMENT '交易hash',
+    transIndex   bigint  COMMENT '交易序号',
+    blockHash  string  COMMENT '区块hash',
+    blockNumber    bigint  COMMENT '区块号',
+    cumulativeGasUsed bigint  COMMENT 'cumulativeGasUsed',
+    gasUsed    bigint  COMMENT 'gasUsed',
+    contractAddress    string  COMMENT 'contract 地址',
+    root    string  COMMENT 'root',
+    status  bigint  COMMENT 'status',
+    effectiveGasPrice bigint  COMMENT 'effectiveGasPrice'
+    )
 
    Create table  dwd_ethereum_bolck_info_da(
     number  int COMMENT '区块号。当这个区块处于pending将会返回null。',
