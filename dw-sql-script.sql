@@ -162,20 +162,21 @@ Create table  dwd_ethereum_block_info_da(
     
    
    Create table  dwd_ethereum_trans_info_di(
-    hash    String  COMMENT '交易hash',
-    time    DATETIME    COMMENT '交易时间',
-    lockTime    BIGINT  COMMENT '交易锁定时间',
-    confirmations   INT COMMENT '确认次数',
-    index   INT    COMMENT '交易索引',
-    coinbase    Boolean COMMENT '是否为coinbase交易',
-    size    Integer COMMENT '交易大小',
-    version INT    COMMENT '版本',
-    doubleSpend Boolean COMMENT '是否双花',
-    value   Double  COMMENT '交易附带的货币量',
-    transactionFee  Double    COMMENT '费用, 单位 satoshi',
-    gasPrice    Double  COMMENT '交易发起者配置的gas价格，单位是wei。',
-    gas Double  COMMENT '交易发起者提供的gas。.',
-    input   String  COMMENT '交易附带的数据',
+    transHash  string COMMENT '交易hash',
+    nonce bigint COMMENT 'POW生成的哈希。当这个区块处于pending将会返回null。',
+    blockHash  String  COMMENT '交易所在区块hash',
+    blockNumber  bigint COMMENT '交易所在区块hash',
+    transactionIndex bigint COMMENT '区块号。当这个区块处于pending将会返回null。',
+    fromAddress  String  COMMENT '交易发起者地址',
+    toAddress  String  COMMENT '交易接收者地址',
+    transValue double COMMENT '交易附带的货币量',
+    gas bigint  COMMENT '交易发起者提供的gas。.',
+    gasPrice bigint    COMMENT '交易发起者配置的gas价格，单位是wei。',
+    input  String  COMMENT '交易附带的数据',
+    blockTimestamp bigint COMMENT '区块时间戳',
+    maxfeePerGas bigint  COMMENT '最大交易费用',
+    maxpriorityfeePerGas  bigint  COMMENT '最大交易费用',
+    transactionType  bigint  COMMENT '交易类型',
     blockHash   String  COMMENT '交易所在区块hash',
     blocknumber int COMMENT '区块号。当这个区块处于pending将会返回null。',
     blockminer  String  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
@@ -189,7 +190,7 @@ Create table  dwd_ethereum_block_info_da(
     fromBalance Double  COMMENT '余额',
     toAdress  String  COMMENT '交易接收者地址',
     toBalance   Double  COMMENT '余额'
-    );
+    )
 
    Create table  dwd_ethereum_account_info_da(
     address String  COMMENT '地址哈希',
