@@ -192,11 +192,7 @@ Create table  dwd_ethereum_block_info_da(
 
    Create table  dwd_ethereum_account_info_da(
     address String  COMMENT '地址哈希',
-    balance Double  COMMENT '余额',
-    totalSentSat    Boolean COMMENT '是否为coinbase交易',
-    storageRoot String   COMMENT '账户数据，默认为空',
-    codeHash    String   COMMENT '合约代码哈希',
-    nonce   String  COMMENT '账户交易数量或者创建合约序号'
+    balance Double  COMMENT '余额'
     );
 
    Create table  dwd_ethereum_defi_project_info_da(
