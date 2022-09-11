@@ -136,34 +136,30 @@ Create table  ods_ethereum_receipt_da(
     effectiveGasPrice bigint  COMMENT 'effectiveGasPrice'
     )
 
-   Create table  dwd_ethereum_bolck_info_da(
-    number  int COMMENT '区块号。当这个区块处于pending将会返回null。',
-    hash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
+
+Create table  dwd_ethereum_block_info_da(
+    blockNumber  int COMMENT '区块号。当这个区块处于pending将会返回null。',
+    blockHash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
+    parentHash  string  COMMENT '字符串，32字节的父区块的哈希值。',
     nonce   string  COMMENT '字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。',
     sha3Uncles  string  COMMENT '字符串，32字节。叔区块的哈希值。',
     logsBloom   string  COMMENT '字符串，区块日志的布隆过滤器9。当这个区块处于pending将会返回null。',
     transactionsRoot string   COMMENT 'String  字符串，32字节，区块的交易前缀树的根。',
     stateRoot   string  COMMENT '字符串，32字节。区块的最终状态前缀树的根。',
+    receiptsRoot string COMMENT '字符串，32字节。区块的最终状态前缀树的根。',
     miner   string  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
     difficulty  bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
     totalDifficulty bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
+    blockSize    int COMMENT 'Number。当前这个块的字节大小。',
     extraData   string  COMMENT '字符串。当前块的extra data字段。',
-    size    int COMMENT 'Number。当前这个块的字节大小。',
     gasLimit    int COMMENT 'Number，当前区块允许使用的最大gas。',
     gasUsed bigint  COMMENT '当前区块累计使用的总的gas。',
-    timestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
-    transactions    array  COMMENT ' 数组。交易对象。或者是32字节的交易哈希。',
-    uncles  array  COMMENT ' 数组。叔哈希的数组。',
-    parentHash  String  COMMENT '字符串，32字节的父区块的哈希值。',
-    parentNumber    int COMMENT '区块号。当这个区块处于pending将会返回null。',
-    parentNonce String  COMMENT '字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。',
-    parentMiner String  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
-    parentDifficulty    bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
-    parentTotalDifficulty   bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
-    parentSize  int COMMENT 'Number。当前这个块的字节大小。',
-    parentTimestamp bigint  COMMENT 'Number。区块打包时的unix时间戳。'
+    blocktimestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
+    transactionCount   bigint  COMMENT '交易数量',
+    baseFeePerGas  bigint  COMMENT '交易费用',
+    reward  bigint  COMMENT '区块奖励'
     );
-
+    
    
    Create table  dwd_ethereum_trans_info_di(
     hash    String  COMMENT '交易hash',
