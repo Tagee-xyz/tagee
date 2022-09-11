@@ -1,6 +1,6 @@
+
 -- 地址余额,有几部分组成： 1.交易中的toAddress   2.fromAddress  扣除交易额 3.加上 block 区块奖励 4交易费用。
-
-
+insert into tagee.tagee_dwd.dwd_ethereum_account_info_da(address,balance)
 select 
        address
        ,value as balance
