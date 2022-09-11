@@ -161,11 +161,10 @@ Create table  dwd_ethereum_block_info_da(
     );
     
    
+
    Create table  dwd_ethereum_trans_info_di(
     transHash  string COMMENT '交易hash',
     nonce bigint COMMENT 'POW生成的哈希。当这个区块处于pending将会返回null。',
-    blockHash  String  COMMENT '交易所在区块hash',
-    blockNumber  bigint COMMENT '交易所在区块hash',
     transactionIndex bigint COMMENT '区块号。当这个区块处于pending将会返回null。',
     fromAddress  String  COMMENT '交易发起者地址',
     toAddress  String  COMMENT '交易接收者地址',
@@ -173,23 +172,22 @@ Create table  dwd_ethereum_block_info_da(
     gas bigint  COMMENT '交易发起者提供的gas。.',
     gasPrice bigint    COMMENT '交易发起者配置的gas价格，单位是wei。',
     input  String  COMMENT '交易附带的数据',
-    blockTimestamp bigint COMMENT '区块时间戳',
     maxfeePerGas bigint  COMMENT '最大交易费用',
     maxpriorityfeePerGas  bigint  COMMENT '最大交易费用',
     transactionType  bigint  COMMENT '交易类型',
     blockHash   String  COMMENT '交易所在区块hash',
-    blocknumber int COMMENT '区块号。当这个区块处于pending将会返回null。',
-    blockminer  String  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
-    blockdifficulty bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
-    blocktotalDifficulty    bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
-    blocksize    int COMMENT 'Number。当前这个块的字节大小。',
+    blockNumber int COMMENT '区块号。当这个区块处于pending将会返回null。',
+    blockMiner  String  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
+    blockDifficulty bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
+    blockTotalDifficulty    bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
+    blockSize    int COMMENT 'Number。当前这个块的字节大小。',
     blockgasLimit    int COMMENT 'Number，当前区块允许使用的最大gas。',
     blockgasUsed bigint  COMMENT '当前区块累计使用的总的gas。',
     blocktimestamp   bigint  COMMENT 'Number。区块打包时的unix时间戳。',
     fromAdress    String  COMMENT '交易发起者地址',
-    fromBalance Double  COMMENT '余额',
+    fromBalance Double  COMMENT '交易发起者余额',
     toAdress  String  COMMENT '交易接收者地址',
-    toBalance   Double  COMMENT '余额'
+    toBalance   Double  COMMENT '交易接收者余额'
     )
 
    Create table  dwd_ethereum_account_info_da(
