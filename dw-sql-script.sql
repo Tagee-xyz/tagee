@@ -136,72 +136,63 @@ Create table  ods_ethereum_receipt_da(
     effectiveGasPrice bigint  COMMENT 'effectiveGasPrice'
     )
 
-   Create table  dwd_ethereum_bolck_info_da(
-    number  int COMMENT '区块号。当这个区块处于pending将会返回null。',
-    hash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
+
+Create table  dwd_ethereum_block_info_da(
+    blockNumber  int COMMENT '区块号。当这个区块处于pending将会返回null。',
+    blockHash    string  COMMENT '区块的哈希串。当这个区块处于pending将会返回null。',
+    parentHash  string  COMMENT '字符串，32字节的父区块的哈希值。',
     nonce   string  COMMENT '字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。',
     sha3Uncles  string  COMMENT '字符串，32字节。叔区块的哈希值。',
     logsBloom   string  COMMENT '字符串，区块日志的布隆过滤器9。当这个区块处于pending将会返回null。',
     transactionsRoot string   COMMENT 'String  字符串，32字节，区块的交易前缀树的根。',
     stateRoot   string  COMMENT '字符串，32字节。区块的最终状态前缀树的根。',
+    receiptsRoot string COMMENT '字符串，32字节。区块的最终状态前缀树的根。',
     miner   string  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
     difficulty  bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
     totalDifficulty bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
+    blockSize    int COMMENT 'Number。当前这个块的字节大小。',
     extraData   string  COMMENT '字符串。当前块的extra data字段。',
-    size    int COMMENT 'Number。当前这个块的字节大小。',
     gasLimit    int COMMENT 'Number，当前区块允许使用的最大gas。',
     gasUsed bigint  COMMENT '当前区块累计使用的总的gas。',
-    timestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
-    transactions    array  COMMENT ' 数组。交易对象。或者是32字节的交易哈希。',
-    uncles  array  COMMENT ' 数组。叔哈希的数组。',
-    parentHash  String  COMMENT '字符串，32字节的父区块的哈希值。',
-    parentNumber    int COMMENT '区块号。当这个区块处于pending将会返回null。',
-    parentNonce String  COMMENT '字符串，8字节。POW生成的哈希。当这个区块处于pending将会返回null。',
-    parentMiner String  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
-    parentDifficulty    bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
-    parentTotalDifficulty   bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
-    parentSize  int COMMENT 'Number。当前这个块的字节大小。',
-    parentTimestamp bigint  COMMENT 'Number。区块打包时的unix时间戳。'
+    blocktimestamp   bigint COMMENT ' Number。区块打包时的unix时间戳。',
+    transactionCount   bigint  COMMENT '交易数量',
+    baseFeePerGas  bigint  COMMENT '交易费用',
+    reward  bigint  COMMENT '区块奖励'
     );
-
+    
    
+
    Create table  dwd_ethereum_trans_info_di(
-    hash    String  COMMENT '交易hash',
-    time    DATETIME    COMMENT '交易时间',
-    lockTime    BIGINT  COMMENT '交易锁定时间',
-    confirmations   INT COMMENT '确认次数',
-    index   INT    COMMENT '交易索引',
-    coinbase    Boolean COMMENT '是否为coinbase交易',
-    size    Integer COMMENT '交易大小',
-    version INT    COMMENT '版本',
-    doubleSpend Boolean COMMENT '是否双花',
-    value   Double  COMMENT '交易附带的货币量',
-    transactionFee  Double    COMMENT '费用, 单位 satoshi',
-    gasPrice    Double  COMMENT '交易发起者配置的gas价格，单位是wei。',
-    gas Double  COMMENT '交易发起者提供的gas。.',
-    input   String  COMMENT '交易附带的数据',
+    transHash  string COMMENT '交易hash',
+    nonce bigint COMMENT 'POW生成的哈希。当这个区块处于pending将会返回null。',
+    transactionIndex bigint COMMENT '区块号。当这个区块处于pending将会返回null。',
+    fromAddress  String  COMMENT '交易发起者地址',
+    toAddress  String  COMMENT '交易接收者地址',
+    transValue double COMMENT '交易附带的货币量',
+    gas bigint  COMMENT '交易发起者提供的gas。.',
+    gasPrice bigint    COMMENT '交易发起者配置的gas价格，单位是wei。',
+    input  String  COMMENT '交易附带的数据',
+    maxfeePerGas bigint  COMMENT '最大交易费用',
+    maxpriorityfeePerGas  bigint  COMMENT '最大交易费用',
+    transactionType  bigint  COMMENT '交易类型',
     blockHash   String  COMMENT '交易所在区块hash',
-    blocknumber int COMMENT '区块号。当这个区块处于pending将会返回null。',
-    blockminer  String  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
-    blockdifficulty bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
-    blocktotalDifficulty    bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
-    blocksize    int COMMENT 'Number。当前这个块的字节大小。',
+    blockNumber int COMMENT '区块号。当这个区块处于pending将会返回null。',
+    blockMiner  String  COMMENT '字符串，20字节。这个区块获得奖励的矿工。',
+    blockDifficulty bigint  COMMENT 'BigNumber类型。当前块的难度，整数。',
+    blockTotalDifficulty    bigint  COMMENT 'BigNumber类型。区块链到当前块的总难度，整数。',
+    blockSize    int COMMENT 'Number。当前这个块的字节大小。',
     blockgasLimit    int COMMENT 'Number，当前区块允许使用的最大gas。',
     blockgasUsed bigint  COMMENT '当前区块累计使用的总的gas。',
     blocktimestamp   bigint  COMMENT 'Number。区块打包时的unix时间戳。',
     fromAdress    String  COMMENT '交易发起者地址',
-    fromBalance Double  COMMENT '余额',
+    fromBalance Double  COMMENT '交易发起者余额',
     toAdress  String  COMMENT '交易接收者地址',
-    toBalance   Double  COMMENT '余额'
-    );
+    toBalance   Double  COMMENT '交易接收者余额'
+    )
 
    Create table  dwd_ethereum_account_info_da(
     address String  COMMENT '地址哈希',
-    balance Double  COMMENT '余额',
-    totalSentSat    Boolean COMMENT '是否为coinbase交易',
-    storageRoot String   COMMENT '账户数据，默认为空',
-    codeHash    String   COMMENT '合约代码哈希',
-    nonce   String  COMMENT '账户交易数量或者创建合约序号'
+    balance Double  COMMENT '余额'
     );
 
    Create table  dwd_ethereum_defi_project_info_da(
