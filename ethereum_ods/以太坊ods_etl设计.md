@@ -123,6 +123,17 @@
       "subtraces" : 0,
       "traceAddress" : [ ],
       "type" : "create"
+    },
+     {
+      "action" : {
+        "address" : "0x7fe6f3ab78407e54e19f91f5c9be0b3ce619cb46",
+        "balance" : "0x1",
+        "refundAddress" : "0x764d7849614e664f6646614161416153744c6255"
+      },
+      "result" : null,
+      "subtraces" : 0,
+      "traceAddress" : [ 0, 0, 0 ],
+      "type" : "suicide"
     }
     ]
 ```
