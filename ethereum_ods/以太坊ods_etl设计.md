@@ -24,6 +24,7 @@
 "input":"",
 "output":"",
 "refundAddress":"",
+"traceAddress","",
 "subTraces":"",
 "callType":"",
 "vmTracecode":"",
