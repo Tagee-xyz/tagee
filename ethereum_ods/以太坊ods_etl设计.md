@@ -16,7 +16,6 @@
 "blockNumber":"",
 "blockTime":"",
 "transHash":"",
-"transIndex":"",
 "fromAddress":"",
 "toAddress":"",
 "gas":"",
